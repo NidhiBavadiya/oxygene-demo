@@ -1,0 +1,112 @@
+@import "./_variable.scss";
+@import url(https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css);
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    overflow: auto;
+    background-color: #f6f6f7;
+        /* width */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+    
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba($white, 0.5);
+            border-radius: 20px;
+        }
+    
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background:rgba($white, 0.5);
+        }
+}
+
+//sidebar scss
+.sidebar{
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 0px 15px rgba(156, 156, 156, 0.1);
+    border-radius: 0px 15px 15px 0px;
+    padding: 20px 0px 0px 0px;
+    inline-size: 270px;
+    min-width:270px;
+
+    .top_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      
+        .oxy-logo{
+            width: 80px;
+            height: 26px;
+            padding-right: 20px;
+        }
+        .oxy_crm_title{
+            font-size: 22px;
+            font-weight: $fw700;
+            color: $primary;
+            margin: 0;
+        }
+    }
+    .side_options{
+        background-color: $primary;
+        color: $white;
+        font-size: 15px;
+        width: 100%;
+        padding: 16px 0px;
+        max-height: 669px;
+        overflow: auto;
+        .side_list{
+            padding: 20px;
+            width: 100%;
+            border-bottom: 1px solid #46424240;
+            &:nth-last-child(1){
+                border-bottom:none;
+            }
+        }
+        .sidelist_ul{
+            list-style: circle;
+            .side_li{
+                padding: 10px;
+                a{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.user_detail_navbar{
+    background-color: $white;
+    max-height: 56px;
+    margin: 30px 16px 16px 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: 100%;
+    .user_name{ 
+        h5{
+            font-size: 16px;
+            font-weight: $fw600;
+            color: $black;
+            margin: 0;
+        }
+    }
+    .right_contact{
+        .notification_icons{
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
