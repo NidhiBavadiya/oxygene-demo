@@ -1,7 +1,10 @@
 <template>
   <div class="user_detail_navbar">
-    <div class="user_name">
+    <div class="user_name d-flex">
         <h5>User Name</h5>
+        <b-button class="Payment_btn">
+            <b-icon icon="plus"></b-icon> Record Customer Payment
+        </b-button>
     </div>
     <div class="right_contact">
         <a href="#" class="notification_icons"><b-icon icon="bell"></b-icon></a>

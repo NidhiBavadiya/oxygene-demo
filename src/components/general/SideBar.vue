@@ -131,7 +131,9 @@
             <div class="ml-auto">
                 <div>
                     <ul class="sidelist_ul">
-                        <li class="side_li"><a href="#">All Contacts</a></li>
+                        <li class="side_li">
+                            <router-link to="/contact">All Contacts</router-link>
+                        </li>
                         <li class="side_li"><a href="#">All Leave</a></li>
                         <li class="side_li"><a href="#">Signature Specimens</a></li>
                         <li class="side_li"><a href="#">Instructor Blocks</a></li>
