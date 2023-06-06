@@ -1,7 +1,8 @@
 <template>
-  <div class="main-layout">
+  <div class="main-layout" :class="{active:showMobilemenu}">
     <div class="sidebar_contact">
         <side-bar></side-bar>
+        <b-button class="disc_btn" @click="showmobilemenu()"><img src="@/assets/images/icons/disc.svg" alt="disc" ></b-button>
     </div>
     <div class="layout_main">
       <user-detail-navbar></user-detail-navbar>
@@ -17,6 +18,16 @@ export default {
 components:{
     SideBar,
     UserDetailNavbar
+},
+data(){
+  return{
+    showMobilemenu:false,
+  }
+},
+methods:{
+  showmobilemenu(){
+    this.showMobilemenu=!this.showMobilemenu;
+  }
 }
 }
 </script>

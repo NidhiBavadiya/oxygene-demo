@@ -26,6 +26,14 @@
         </b-dropdown>
       </template>
     </b-table>
+    <div
+      class="d-lg-flex align-items-center justify-content-center px-5 mx-auto no-found-img"
+      v-if="(!items.length)"
+    >
+      <div class="no-data-found">
+        <p>No Data Available</p>
+      </div>
+    </div>
   </div>
 </template>
 

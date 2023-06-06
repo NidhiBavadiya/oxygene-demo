@@ -1,7 +1,8 @@
 <template>
   <div class="sidebar">
+    <!-- <div class="small_sidebar"> -->
     <div class="top_logo">
-        <img src="@/assets/images/iocns/oxygene-logo.png" alt="company logo" class="oxy-logo">
+        <img src="@/assets/images/icons/oxygene-logo.png" alt="company logo" class="oxy-logo">
         <h5 class="oxy_crm_title">CRM</h5>
     </div>
     <!-- sidebar list data -->
@@ -10,6 +11,9 @@
         <!-- Booking -->
         <b-navbar-toggle target="navbar-toggle-collapse-booking" class="side_list">
             <div class="d-flex">
+                <span>
+                    <img src="@/assets/images/icons/book.svg" alt="book" class="side_icons">
+                </span>
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -34,6 +38,7 @@
         <!-- Dashbord -->
         <b-navbar-toggle target="navbar-toggle-collapse-dashboard" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/home.svg" alt="home" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -55,6 +60,7 @@
         <!-- Finance -->
         <b-navbar-toggle target="navbar-toggle-collapse-finance" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/dollar-sign.svg" alt="dollar" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -80,27 +86,18 @@
         <!-- Payroll -->
         <b-navbar-toggle target="navbar-toggle-collapse-payroll" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/book.svg" alt="book" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
                 >Payroll</button>
             </div>
         </b-navbar-toggle>
-        <!-- <b-collapse id="navbar-toggle-collapse-payroll" is-nav> -->
-            <!-- <div class="ml-auto"> -->
-                <!-- <div> -->
-                    <!-- <ul class="sidelist_ul"> -->
-                        <!-- <li class="side_li"><a href="#">General</a></li> -->
-                        <!-- <li class="side_li"><a href="#">Courses</a></li> -->
-                        <!-- <li class="side_li"><a href="#">Finance Dashboard</a></li> -->
-                    <!-- </ul> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </b-collapse> -->
 
         <!-- Reports -->
         <b-navbar-toggle target="navbar-toggle-collapse-reports" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/clipboard.svg" alt="clipboard" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -111,7 +108,9 @@
             <div class="ml-auto">
                 <div>
                     <ul class="sidelist_ul">
-                        <li class="side_li"><a href="#">Monthly Cash Payment</a></li>
+                        <router-link to="/report">
+                                <li class="side_li">Monthly Cash Payment</li>
+                        </router-link>
                     </ul>
                 </div>
             </div>
@@ -121,6 +120,7 @@
         <!-- Contacts -->
         <b-navbar-toggle target="navbar-toggle-collapse-contacts" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/users.svg" alt="users" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -131,12 +131,26 @@
             <div class="ml-auto">
                 <div>
                     <ul class="sidelist_ul">
-                        <li class="side_li">
-                            <router-link to="/contact">All Contacts</router-link>
-                        </li>
-                        <li class="side_li"><a href="#">All Leave</a></li>
-                        <li class="side_li"><a href="#">Signature Specimens</a></li>
-                        <li class="side_li"><a href="#">Instructor Blocks</a></li>
+                        <router-link to="/contact">
+                            <li class="side_li">
+                                All Contacts
+                            </li>
+                        </router-link>
+                        <router-link to="/contact/leave">
+                            <li class="side_li">
+                                All Leave
+                            </li>
+                        </router-link>
+                        <router-link to="/contact/sign">
+                            <li class="side_li">
+                                Signature Specimens
+                            </li>
+                        </router-link>
+                        <router-link to="/contact/instructor">
+                            <li class="side_li">
+                                Instructor Blocks
+                            </li>
+                        </router-link>
                     </ul>
                 </div>
             </div>
@@ -146,6 +160,7 @@
         <!-- Course Catalog -->
         <b-navbar-toggle target="navbar-toggle-collapse-catalog" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/book.svg" alt="book" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -168,6 +183,7 @@
         <!-- Product Catalog -->
         <b-navbar-toggle target="navbar-toggle-collapse-product-catalog" class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/book.svg" alt="book" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -188,6 +204,7 @@
         <!-- Masters & Settings -->
         <b-navbar-toggle target="navbar-toggle-collapse-settings" class="side_list">
             <div class="d-flex">
+            <img src="@/assets/images/icons/briefcase.svg" alt="briefcase" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -207,8 +224,9 @@
         </b-collapse>
 
              <!-- user -->
-             <b-navbar-toggle class="side_list">
-            <div class="d-flex">
+        <b-navbar-toggle class="side_list">
+            <div class="d-flex side_value">
+                <img src="@/assets/images/icons/users.svg" alt="users" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -217,8 +235,9 @@
         </b-navbar-toggle>
 
              <!--User Action Trails-->
-             <b-navbar-toggle  class="side_list">
+            <b-navbar-toggle  class="side_list">
             <div class="d-flex">
+                <img src="@/assets/images/icons/file-text.svg" alt="file" class="side_icons">
                 <button
                   class="accordion-button custom-nav collapsed"
                   type="button"
@@ -226,6 +245,7 @@
             </div>
         </b-navbar-toggle>
     </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -236,5 +256,9 @@ export default {
 </script>
 
 <style>
+.span{
+    color: white;
+    fill: currentColor;
+}
 
 </style>

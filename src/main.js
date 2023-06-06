@@ -4,6 +4,10 @@ import router from '@/router/index.js'
 
 Vue.config.productionTip = false
 
+// import mixin file
+require('./mixin/index');
+
+
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -13,11 +17,7 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
-//vue select
-import "vue-select/dist/vue-select.css";
-import vSelect from "vue-select";
 
-Vue.component("v-select", vSelect);
 
 new Vue({
   router,

@@ -12,6 +12,7 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "vue": "^2.7.14",
+    "vue-flatpickr-component": "^11.0.3",
     "vue-router": "^3.6.5",
     "vue-select": "^3.20.2"
   },
