@@ -1,6 +1,5 @@
 <template>
   <div class="sidebar">
-    <!-- <div class="small_sidebar"> -->
     <div class="top_logo">
         <img src="@/assets/images/icons/oxygene-logo.png" alt="company logo" class="oxy-logo">
         <h5 class="oxy_crm_title">CRM</h5>
@@ -245,7 +244,6 @@
             </div>
         </b-navbar-toggle>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -256,9 +254,5 @@ export default {
 </script>
 
 <style>
-.span{
-    color: white;
-    fill: currentColor;
-}
 
 </style>

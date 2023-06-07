@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="contacts">
+    <div class="contacts" v-if="allContact">
       <div class="contact_title">
         <h5 class>contacts</h5>
       </div>
@@ -10,7 +10,6 @@
           <b-form-input class="search_input my-2"></b-form-input>
           <b-icon icon="search" class="search_icon"></b-icon>
           </div>
-
           <v-select class="search_input my-2" label="Select" :options="option"></v-select>
           <b-button class="green_btn mr-2 my-2">
             <b-icon icon="box-arrow-up" class="mr-1"></b-icon>Export
@@ -21,7 +20,7 @@
           <b-button class="import_btn mr-2 my-2">
             <b-icon icon="box-arrow-down" class="mr-1"></b-icon>Import Contact
           </b-button>
-          <b-button class="blue_btn my-2">
+          <b-button class="blue_btn my-2" @click="allContact=false">
             <b-icon icon="plus" class="mr-1"></b-icon>Add Contact
           </b-button>
         </div>
@@ -31,18 +30,22 @@
         <contact-list-table :fields="contactFields" :items="contactData"></contact-list-table>
       </div>
     </div>
+    <add-edit-contact @showAllContact="allContact=true" v-else></add-edit-contact>
   </div>
 </template>
 
 <script>
+import AddEditContact from "./contact-modal/AddEditContact.vue";
 import ContactListTable from "@/components/general/ContactListTable.vue"
 export default {
     components: {
     ContactListTable,
+    AddEditContact
   },
   data() {
     return {
       option: ["California", "Colorado", "Florida"],
+      allContact:true,
     };
   }
 };

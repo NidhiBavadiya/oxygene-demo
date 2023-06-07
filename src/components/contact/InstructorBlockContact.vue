@@ -1,5 +1,6 @@
 <template>
-  <div class="Instructor_Blocks">
+  <div>
+  <div class="Instructor_Blocks" v-if="showAddBlock">
     <div class="contact_title">
       <h5>Instructor Blocks</h5>
     </div>
@@ -14,7 +15,7 @@
         </div>
         <div class="top_right_buttons">
             <b-button class="delete_contact_btn mr-2"><b-icon icon="trash" class="mr-1"></b-icon>Delete Block</b-button>
-            <b-button class="blue_btn mr-2 my-2"><b-icon icon="plus" class="mr-1"></b-icon>Add Block</b-button>
+            <b-button class="blue_btn mr-2 my-2" @click="showAddBlock=false"><b-icon icon="plus" class="mr-1"></b-icon>Add Block</b-button>
             <b-button class="import_btn"> <b-icon icon="box-arrow-up" class="mr-1"></b-icon>Export</b-button>
         </div>
       </div>
@@ -24,17 +25,23 @@
         <contact-list-table :fields="instructorFields" :items="instructorData"></contact-list-table>
       </div>
   </div>
+      <add-edit-block @showblock="showAddBlock=true" v-else></add-edit-block>
+</div>
 </template>
 
 <script>
+import AddEditBlock from './contact-modal/AddEditBlock.vue';
 import ContactListTable from '../general/ContactListTable.vue';
 export default {
   components:{
-    ContactListTable
+    ContactListTable,
+    AddEditBlock
   },
 data(){
     return{
         option: ["California", "Colorado", "Florida"],
+
+        showAddBlock:true,
         
 
     }

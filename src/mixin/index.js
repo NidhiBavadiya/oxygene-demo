@@ -10,10 +10,15 @@ import vSelect from "vue-select";
 import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
 
+//vue phone number
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+
 Vue.mixin({
     components: {    
         vSelect,
-        flatPickr
+        flatPickr,
+        VuePhoneNumberInput
     },
     data() {
       return{
